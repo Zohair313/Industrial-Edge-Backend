@@ -143,8 +143,6 @@ export const mailer = {
       <p><strong>Customer Phone:</strong> ${order.customer?.phone}</p>
       <p><strong>Total Amount:</strong> Rs. ${order.total}</p>
       <p><strong>Payment Method:</strong> Cash on Delivery (COD)</p>
-      <hr style="border:none;border-top:1px solid #eee;margin:20px 0;" />
-      <p><a href="http://localhost:5173/admin" style="background: #f59e0b; color: white; padding: 10px 20px; text-decoration: none; border-radius: 4px; display: inline-block;">Go to Admin Panel</a></p>
     </div>`
     return deliver('admin-order-notification', adminEmail, subject, text, html)
   },

@@ -64,6 +64,7 @@ export async function markProcessing(order, provider) {
 
 /** Append an entry to the order's append-only audit trail. */
 export function logEvent(order, { provider, event, verified = false, outcome, detail, raw } = {}) {
+  if (!order.webhookLogs) order.webhookLogs = []
   order.webhookLogs.push({
     at: new Date(), provider, event, verified, outcome, detail,
     raw: raw ? safeRaw(raw) : undefined,
