@@ -1,0 +1,275 @@
+[
+  {
+    "_id": "1a3b2b4ab785516edacf1e0c",
+    "sku": "SP-15PM-BLK",
+    "name": "iPhone 15 Pro Max — 256GB Titanium",
+    "category": "smartphones",
+    "glyph": "electrical",
+    "price": 1199,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 45,
+    "lead": "Ships today",
+    "tags": [
+      "Apple",
+      "5G",
+      "Titanium"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 1199
+      },
+      {
+        "qty": 5,
+        "price": 1149
+      },
+      {
+        "qty": 10,
+        "price": 1099
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Screen Size": "6.7 inches",
+      "Processor": "A17 Pro Chip",
+      "Storage": "256 GB",
+      "Camera": "48 MP Main",
+      "OS": "iOS 17",
+      "Weight": "221 g"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80"
+    ],
+    "description": "The ultimate iPhone experience.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  },
+  {
+    "_id": "7645b5f4d20df8d540557bc7",
+    "sku": "LP-MBP16-SLV",
+    "name": "MacBook Pro 16\" — M3 Max / 36GB / 1TB",
+    "category": "laptops",
+    "glyph": "handling",
+    "price": 3499,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 12,
+    "lead": "Ships today",
+    "tags": [
+      "Apple",
+      "M3 Max",
+      "Retina"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 3499
+      },
+      {
+        "qty": 3,
+        "price": 3399
+      },
+      {
+        "qty": 5,
+        "price": 3299
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Screen Size": "16.2 inches Liquid Retina XDR",
+      "Processor": "M3 Max 16-Core",
+      "RAM": "36 GB Unified",
+      "Storage": "1 TB SSD",
+      "Battery Life": "Up to 22 hours",
+      "Color": "Silver"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80"
+    ],
+    "description": "The MacBook Pro blasts forward with M3 Max.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  },
+  {
+    "_id": "f50de1d7ea007ec6e7e349e7",
+    "sku": "AD-XM5-SNY",
+    "name": "Sony WH-1000XM5 Wireless Headphones",
+    "category": "audio",
+    "glyph": "motor",
+    "price": 398,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 85,
+    "lead": "Ships today",
+    "tags": [
+      "Sony",
+      "ANC",
+      "Bluetooth"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 398
+      },
+      {
+        "qty": 10,
+        "price": 368
+      },
+      {
+        "qty": 50,
+        "price": 348
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Type": "Over-Ear",
+      "Driver Unit": "30 mm",
+      "Noise Cancelling": "Industry Leading ANC",
+      "Battery Life": "Up to 30 hours",
+      "Bluetooth Version": "5.2",
+      "Weight": "250 g"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"
+    ],
+    "description": "Industry-leading noise cancellation.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  },
+  {
+    "_id": "2705d1650519024a6d30e7c0",
+    "sku": "SW-APW9-45",
+    "name": "Apple Watch Series 9 GPS — 45mm Midnight",
+    "category": "smartwatch",
+    "glyph": "transmission",
+    "price": 429,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 30,
+    "lead": "Ships today",
+    "tags": [
+      "Apple",
+      "GPS",
+      "Siri"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 429
+      },
+      {
+        "qty": 5,
+        "price": 409
+      },
+      {
+        "qty": 10,
+        "price": 389
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Size": "45 mm",
+      "Display": "Always-On Retina OLED",
+      "Water Resistance": "Swimproof (50m)",
+      "Sensors": "ECG, Blood Oxygen, Temp",
+      "Battery Life": "Up to 18 hours"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80"
+    ],
+    "description": "Advanced health, safety, and activity features.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  },
+  {
+    "_id": "b5c08d024ff31044c2a3c6d2",
+    "sku": "AC-GAN100-ANK",
+    "name": "Anker Prime 100W GaN Wall Charger",
+    "category": "accessories",
+    "glyph": "fastener",
+    "price": 89,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 450,
+    "lead": "Ships today",
+    "tags": [
+      "Anker",
+      "GaN",
+      "USB-C"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 89
+      },
+      {
+        "qty": 20,
+        "price": 79
+      },
+      {
+        "qty": 100,
+        "price": 69
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Total Wattage": "100 W",
+      "Ports": "2× USB-C, 1× USB-A",
+      "Technology": "GaNPrime",
+      "Dimensions": "67.8 × 43.5 × 29 mm",
+      "Weight": "183 g"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1622445262465-2481c4574875?w=600&q=80"
+    ],
+    "description": "Ultra-compact multi-port charger.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  },
+  {
+    "_id": "28ed66e97a5a0ffdaf393577",
+    "sku": "SP-S24U-GRY",
+    "name": "Samsung Galaxy S24 Ultra — 512GB Gray",
+    "category": "smartphones",
+    "glyph": "electrical",
+    "price": 1299,
+    "unit": "ea",
+    "moq": 1,
+    "stock": 22,
+    "lead": "Ships today",
+    "tags": [
+      "Samsung",
+      "5G",
+      "Stylus"
+    ],
+    "tiers": [
+      {
+        "qty": 1,
+        "price": 1299
+      },
+      {
+        "qty": 5,
+        "price": 1249
+      },
+      {
+        "qty": 10,
+        "price": 1199
+      }
+    ],
+    "status": "live",
+    "specs": {
+      "Screen Size": "6.8 inches QHD+",
+      "Processor": "Snapdragon 8 Gen 3",
+      "Storage": "512 GB",
+      "Camera": "200 MP Main",
+      "Stylus": "S Pen Included"
+    },
+    "images": [
+      "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&q=80"
+    ],
+    "description": "Welcome to the era of mobile AI.",
+    "createdAt": "2026-07-08T17:11:18.989Z",
+    "updatedAt": "2026-07-08T17:11:18.989Z"
+  }
+]

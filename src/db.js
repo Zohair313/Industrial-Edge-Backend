@@ -1,49 +1,34 @@
-import mongoose from 'mongoose'
-import fs from 'fs'
-import path from 'path'
-
 /**
- * Connect to MongoDB.
- * - If MONGODB_URI is set, connect to that (real Mongo / Atlas) — the
- *   recommended production path.
- * - Otherwise spin up an embedded MongoDB via mongodb-memory-server, but point
- *   it at a persistent on-disk dbPath so data SURVIVES server restarts. (The
- *   default memory-server is ephemeral; pinning dbPath makes it durable.)
- * The Mongoose layer is identical either way.
+ * Connect to the data layer.
+ * - If MONGODB_URI is set, connect to real MongoDB / Atlas.
+ * - Otherwise, use the JSON-file local store (no MongoDB needed).
+ *
+ * The local store is the default for development — zero setup required.
+ * Set MONGODB_URI when you're ready for a real database.
  */
-let embedded = null
+
+let useLocalStore = false
 
 export async function connectDB() {
-  let uri = process.env.MONGODB_URI
+  const uri = process.env.MONGODB_URI
 
-  if (!uri) {
-    const { MongoMemoryServer } = await import('mongodb-memory-server')
-    const dbPath = path.resolve(process.cwd(), process.env.MONGO_DB_PATH || './.mongo-data')
-    fs.mkdirSync(dbPath, { recursive: true })
-    // A hard kill can leave a stale lock that blocks the next boot; WiredTiger
-    // recovers from its journal, so clearing the lock is safe.
-    try { fs.rmSync(path.join(dbPath, 'mongod.lock'), { force: true }) } catch {}
-    console.log('• No MONGODB_URI set — starting embedded MongoDB (disk-backed)…')
-    embedded = await MongoMemoryServer.create({
-      instance: { dbName: 'industrial_edge', dbPath, storageEngine: 'wiredTiger' },
-    })
-    uri = embedded.getUri('industrial_edge')
-    console.log(`• Embedded MongoDB ready · data persisted at ${dbPath}`)
-    console.warn('  ⚠ For production use a managed MongoDB via MONGODB_URI.')
+  if (uri) {
+    // ---- Real MongoDB ----
+    const mongoose = (await import('mongoose')).default
+    mongoose.set('strictQuery', true)
+    await mongoose.connect(uri)
+    console.log(`• Mongoose connected → ${uri.replace(/\/\/.*@/, '//***@')}`)
+    return { uri, embedded: null }
   }
 
-  mongoose.set('strictQuery', true)
-  await mongoose.connect(uri)
-  console.log(`• Mongoose connected → ${uri.replace(/\/\/.*@/, '//***@')}`)
-
-  return { uri, embedded }
+  // ---- Local JSON store (default dev mode) ----
+  useLocalStore = true
+  console.log('• No MONGODB_URI set — using local JSON file store')
+  console.log('  Data is persisted in ./data/*.json')
+  console.warn('  ⚠ For production, set MONGODB_URI to a managed MongoDB.')
+  return { uri: null, embedded: null }
 }
 
-// Clean shutdown so the on-disk data files are flushed and not corrupted.
-async function shutdown() {
-  try { await mongoose.disconnect() } catch {}
-  try { if (embedded) await embedded.stop({ doCleanup: false, force: false }) } catch {}
-  process.exit(0)
+export function isLocalStore() {
+  return useLocalStore
 }
-process.on('SIGINT', shutdown)
-process.on('SIGTERM', shutdown)

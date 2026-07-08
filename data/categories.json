@@ -1,0 +1,200 @@
+[
+  {
+    "_id": "f1f624beb528bdc19157b45a",
+    "name": "Smartphones & Mobiles",
+    "code": "SP",
+    "slug": "smartphones",
+    "blurb": "Flagship phones, budget models & rugged devices",
+    "parent": null,
+    "order": 0,
+    "count": 2,
+    "fields": [
+      {
+        "label": "Screen Size",
+        "type": "dimension",
+        "unit": "inches"
+      },
+      {
+        "label": "Processor",
+        "type": "text"
+      },
+      {
+        "label": "Storage",
+        "type": "dimension",
+        "unit": "GB"
+      },
+      {
+        "label": "Camera",
+        "type": "dimension",
+        "unit": "MP Main"
+      },
+      {
+        "label": "OS",
+        "type": "text"
+      },
+      {
+        "label": "Weight",
+        "type": "dimension",
+        "unit": "g"
+      },
+      {
+        "label": "Stylus",
+        "type": "text"
+      }
+    ],
+    "createdAt": "2026-07-08T17:11:18.986Z",
+    "updatedAt": "2026-07-08T17:11:18.986Z"
+  },
+  {
+    "_id": "9ebac6a13f450f226a879331",
+    "name": "Laptops & Computers",
+    "code": "LP",
+    "slug": "laptops",
+    "blurb": "High-performance work laptops, ultrabooks & gaming rigs",
+    "parent": null,
+    "order": 1,
+    "count": 1,
+    "fields": [
+      {
+        "label": "Screen Size",
+        "type": "dimension",
+        "unit": "inches Liquid Retina XDR"
+      },
+      {
+        "label": "Processor",
+        "type": "text"
+      },
+      {
+        "label": "RAM",
+        "type": "dimension",
+        "unit": "GB Unified"
+      },
+      {
+        "label": "Storage",
+        "type": "dimension",
+        "unit": "TB SSD"
+      },
+      {
+        "label": "Battery Life",
+        "type": "text"
+      },
+      {
+        "label": "Color",
+        "type": "text"
+      }
+    ],
+    "createdAt": "2026-07-08T17:11:18.986Z",
+    "updatedAt": "2026-07-08T17:11:18.986Z"
+  },
+  {
+    "_id": "671c0c4eac075025384196b3",
+    "name": "Audio & Headphones",
+    "code": "AD",
+    "slug": "audio",
+    "blurb": "Noise-cancelling headphones, earbuds & home audio",
+    "parent": null,
+    "order": 2,
+    "count": 1,
+    "fields": [
+      {
+        "label": "Type",
+        "type": "text"
+      },
+      {
+        "label": "Driver Unit",
+        "type": "dimension",
+        "unit": "mm"
+      },
+      {
+        "label": "Noise Cancelling",
+        "type": "text"
+      },
+      {
+        "label": "Battery Life",
+        "type": "text"
+      },
+      {
+        "label": "Bluetooth Version",
+        "type": "number"
+      },
+      {
+        "label": "Weight",
+        "type": "dimension",
+        "unit": "g"
+      }
+    ],
+    "createdAt": "2026-07-08T17:11:18.986Z",
+    "updatedAt": "2026-07-08T17:11:18.986Z"
+  },
+  {
+    "_id": "56534f3c860023f26a19dd89",
+    "name": "Smartwatches & Wearables",
+    "code": "SW",
+    "slug": "smartwatch",
+    "blurb": "Fitness trackers, smartwatches & health monitors",
+    "parent": null,
+    "order": 3,
+    "count": 1,
+    "fields": [
+      {
+        "label": "Size",
+        "type": "dimension",
+        "unit": "mm"
+      },
+      {
+        "label": "Display",
+        "type": "text"
+      },
+      {
+        "label": "Water Resistance",
+        "type": "text"
+      },
+      {
+        "label": "Sensors",
+        "type": "text"
+      },
+      {
+        "label": "Battery Life",
+        "type": "text"
+      }
+    ],
+    "createdAt": "2026-07-08T17:11:18.986Z",
+    "updatedAt": "2026-07-08T17:11:18.986Z"
+  },
+  {
+    "_id": "fbb1dc8f2dc8f8d100646732",
+    "name": "Accessories & Chargers",
+    "code": "AC",
+    "slug": "accessories",
+    "blurb": "Fast chargers, USB-C hubs & power banks",
+    "parent": null,
+    "order": 4,
+    "count": 1,
+    "fields": [
+      {
+        "label": "Total Wattage",
+        "type": "dimension",
+        "unit": "W"
+      },
+      {
+        "label": "Ports",
+        "type": "text"
+      },
+      {
+        "label": "Technology",
+        "type": "text"
+      },
+      {
+        "label": "Dimensions",
+        "type": "text"
+      },
+      {
+        "label": "Weight",
+        "type": "dimension",
+        "unit": "g"
+      }
+    ],
+    "createdAt": "2026-07-08T17:11:18.986Z",
+    "updatedAt": "2026-07-08T17:11:18.986Z"
+  }
+]

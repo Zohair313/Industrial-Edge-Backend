@@ -124,14 +124,12 @@ export async function seedDatabase({ force = false } = {}) {
   return { skipped: false, categories: catDocs.length, products: prodDocs.length }
 }
 
-/* Standalone runner: `npm run seed` against a real MONGODB_URI. */
+/* Standalone runner: `npm run seed` */
 const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]
 if (isMain) {
   const { connectDB } = await import('./db.js')
-  const mongoose = (await import('mongoose')).default
   await connectDB()
   const res = await seedDatabase({ force: true })
   console.log('Seed complete:', res)
-  await mongoose.disconnect()
   process.exit(0)
 }

@@ -1,11 +1,5 @@
-import mongoose from 'mongoose'
+import { createCollection } from '../localStore.js'
 
-const SiteSettingSchema = new mongoose.Schema(
-  {
-    key: { type: String, required: true, unique: true, index: true },
-    value: { type: mongoose.Schema.Types.Mixed, required: true },
-  },
-  { timestamps: true }
-)
-
-export const SiteSetting = mongoose.model('SiteSetting', SiteSettingSchema)
+export const SiteSetting = createCollection('site_settings', {
+  uniqueFields: ['key'],
+})

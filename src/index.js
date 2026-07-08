@@ -4,7 +4,6 @@ import cors from 'cors'
 import helmet from 'helmet'
 import cookieParser from 'cookie-parser'
 import rateLimit from 'express-rate-limit'
-import mongoSanitize from 'express-mongo-sanitize'
 import { connectDB } from './db.js'
 import { seedDatabase } from './seed.js'
 import { seedAdmin } from './seedAdmin.js'
@@ -44,9 +43,14 @@ async function main() {
   // against the exact bytes the gateway signed.
   app.use(express.json({ limit: '64kb', verify: (req, _res, buf) => { req.rawBody = buf.toString('utf8') } }))
   app.use(cookieParser())
-  // Strip any keys containing $ or . from body/query/params → blocks Mongo
-  // operator injection (e.g. {"email":{"$ne":null}}).
-  app.use(mongoSanitize())
+
+  // Basic input sanitization — strip keys containing $ or . from body
+  app.use((req, res, next) => {
+    if (req.body && typeof req.body === 'object') {
+      sanitizeObj(req.body)
+    }
+    next()
+  })
 
   // Global rate limit, with a stricter limiter on auth to throttle brute force.
   app.use('/api', rateLimit({ windowMs: config.rateLimit.windowMs, max: config.rateLimit.max, standardHeaders: true, legacyHeaders: false }))
@@ -87,6 +91,18 @@ async function main() {
   })
 
   app.listen(PORT, () => console.log(`\n▸ Industrial Edge API → http://localhost:${PORT}/api\n`))
+}
+
+/* Simple sanitizer: strip keys containing $ or . to block injection */
+function sanitizeObj(obj) {
+  if (!obj || typeof obj !== 'object') return
+  for (const key of Object.keys(obj)) {
+    if (key.includes('$') || key.includes('.')) {
+      delete obj[key]
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      sanitizeObj(obj[key])
+    }
+  }
 }
 
 main().catch((e) => {
