@@ -74,19 +74,7 @@ export const mailer = {
       <p>Hi <strong>${order.customer?.name}</strong>,</p>
       <p>Your order <strong>${order.ref}</strong> has been confirmed. Thank you for shopping with ${config.company.name}!</p>
       <hr style="border:none;border-top:1px solid #eee;margin:20px 0;" />
-      <p><strong>Total Amount:</strong> Rs. ${order.total}</p>
-      <p><strong>Payment Method:</strong> Cash on Delivery (COD)</p>
-    </div>`
-    return deliver('order-confirmation', order.customer?.email, subject, text, html)
-  },
-
-  async sendInvoice(order) {
-    if (!assertPaid(order, 'invoice')) return null
-    const subject = `Invoice for Order ${order.ref} - ${config.company.name}`
-    const text = `Hi ${order.customer?.name},\n\nHere is your invoice for order ${order.ref}.\n\nTotal Paid: Rs. ${order.total}`
-    const html = `<div style="font-family:sans-serif;padding:20px;color:#333;">
-      <h2>Invoice</h2>
-      <p>Order Reference: <strong>${order.ref}</strong></p>
+      <h3>Order Details</h3>
       <table style="width:100%;border-collapse:collapse;margin:15px 0;">
         <thead>
           <tr style="background:#f5f5f5;">
@@ -104,8 +92,9 @@ export const mailer = {
         </tbody>
       </table>
       <p style="text-align:right;font-size:1.1rem;"><strong>Total:</strong> Rs. ${order.total}</p>
+      <p><strong>Payment Method:</strong> Cash on Delivery (COD)</p>
     </div>`
-    return deliver('invoice', order.customer?.email, subject, text, html)
+    return deliver('order-confirmation', order.customer?.email, subject, text, html)
   },
 
   async sendReceipt(order) {
@@ -119,12 +108,31 @@ export const mailer = {
   /** Optional, allowed pre-payment: "we received your order, awaiting payment". */
   async sendPendingPaymentNotice(order) {
     if (order.status !== ORDER_STATUS.PENDING_PAYMENT) return null
-    const subject = `Order Placed: ${order.ref} - Pending Payment`
+    const subject = `Order Placed: ${order.ref} - ${config.company.name}`
     const text = `Hi ${order.customer?.name},\n\nYour order ${order.ref} has been placed. We will dispatch it shortly.\n\nTotal Amount: Rs. ${order.total}`
     const html = `<div style="font-family:sans-serif;padding:20px;color:#333;">
       <h2>Order Placed!</h2>
       <p>Hi <strong>${order.customer?.name}</strong>,</p>
       <p>Your order <strong>${order.ref}</strong> has been successfully placed. We will dispatch it via Cash on Delivery.</p>
+      <hr style="border:none;border-top:1px solid #eee;margin:20px 0;" />
+      <h3>Order Details</h3>
+      <table style="width:100%;border-collapse:collapse;margin:15px 0;">
+        <thead>
+          <tr style="background:#f5f5f5;">
+            <th style="padding:8px;border:1px solid #ddd;text-align:left;">Item</th>
+            <th style="padding:8px;border:1px solid #ddd;text-align:right;">Qty</th>
+            <th style="padding:8px;border:1px solid #ddd;text-align:right;">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${order.lines.map(l => `<tr>
+            <td style="padding:8px;border:1px solid #ddd;">${l.name}</td>
+            <td style="padding:8px;border:1px solid #ddd;text-align:right;">${l.qty}</td>
+            <td style="padding:8px;border:1px solid #ddd;text-align:right;">Rs. ${l.price}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+      <p style="text-align:right;font-size:1.1rem;"><strong>Total:</strong> Rs. ${order.total}</p>
     </div>`
     return deliver('pending-payment-notice', order.customer?.email, subject, text, html)
   },

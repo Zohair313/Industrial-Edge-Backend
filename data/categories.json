@@ -1,6 +1,6 @@
 [
   {
-    "_id": "aa0af5828cb7fc95a3dba38a",
+    "_id": "666d4ed5355f7f88a2e826c0",
     "name": "Smartphones & Mobiles",
     "code": "SP",
     "slug": "smartphones",
@@ -42,11 +42,11 @@
         "type": "text"
       }
     ],
-    "createdAt": "2026-07-08T19:04:42.096Z",
-    "updatedAt": "2026-07-08T19:04:42.096Z"
+    "createdAt": "2026-07-08T19:40:58.179Z",
+    "updatedAt": "2026-07-08T19:40:58.179Z"
   },
   {
-    "_id": "87d352b8685e594b1494715f",
+    "_id": "35120a3cc82f136fe4d6ff67",
     "name": "Laptops & Computers",
     "code": "LP",
     "slug": "laptops",
@@ -83,11 +83,11 @@
         "type": "text"
       }
     ],
-    "createdAt": "2026-07-08T19:04:42.096Z",
-    "updatedAt": "2026-07-08T19:04:42.096Z"
+    "createdAt": "2026-07-08T19:40:58.179Z",
+    "updatedAt": "2026-07-08T19:40:58.179Z"
   },
   {
-    "_id": "3083d29c307d32d0db3a5b8d",
+    "_id": "346361f21f7526ae5675377a",
     "name": "Audio & Headphones",
     "code": "AD",
     "slug": "audio",
@@ -123,11 +123,11 @@
         "unit": "g"
       }
     ],
-    "createdAt": "2026-07-08T19:04:42.096Z",
-    "updatedAt": "2026-07-08T19:04:42.096Z"
+    "createdAt": "2026-07-08T19:40:58.179Z",
+    "updatedAt": "2026-07-08T19:40:58.179Z"
   },
   {
-    "_id": "9c5a30aca4c303c70c3c0e38",
+    "_id": "2969be8a0c6588cfcc932036",
     "name": "Smartwatches & Wearables",
     "code": "SW",
     "slug": "smartwatch",
@@ -158,11 +158,11 @@
         "type": "text"
       }
     ],
-    "createdAt": "2026-07-08T19:04:42.096Z",
-    "updatedAt": "2026-07-08T19:04:42.096Z"
+    "createdAt": "2026-07-08T19:40:58.179Z",
+    "updatedAt": "2026-07-08T19:40:58.179Z"
   },
   {
-    "_id": "c7ef2e18c6c615df05324dcf",
+    "_id": "14290f9faa37620971857983",
     "name": "Accessories & Chargers",
     "code": "AC",
     "slug": "accessories",
@@ -194,7 +194,7 @@
         "unit": "g"
       }
     ],
-    "createdAt": "2026-07-08T19:04:42.096Z",
-    "updatedAt": "2026-07-08T19:04:42.096Z"
+    "createdAt": "2026-07-08T19:40:58.179Z",
+    "updatedAt": "2026-07-08T19:40:58.179Z"
   }
 ]

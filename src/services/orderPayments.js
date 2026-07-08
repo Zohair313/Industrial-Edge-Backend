@@ -36,7 +36,6 @@ export async function applyVerifiedPayment(order, result) {
 
   // Side-effects strictly AFTER verified PAID + persistence.
   mailer.sendOrderConfirmation(order).catch(() => {})
-  mailer.sendInvoice(order).catch(() => {})
   return order
 }
 

@@ -73,12 +73,13 @@ router.post('/import', ...admin, async (req, res, next) => {
   } catch (e) { next(e) }
 })
 
-/* PATCH /api/categories/:slug  { name?, blurb? } */
+/* PATCH /api/categories/:slug  { name?, blurb?, image? } */
 router.patch('/:slug', ...admin, async (req, res, next) => {
   try {
     const patch = {}
     if (typeof req.body.name === 'string' && req.body.name.trim()) patch.name = req.body.name.trim()
     if (typeof req.body.blurb === 'string') patch.blurb = req.body.blurb.trim()
+    if (typeof req.body.image === 'string') patch.image = req.body.image.trim()
     const cat = await Category.findOneAndUpdate({ slug: req.params.slug }, { $set: patch }, { new: true, runValidators: true })
     if (!cat) return res.status(404).json({ error: 'Not found' })
     res.json(cat.toJSON())

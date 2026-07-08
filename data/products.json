@@ -1,6 +1,6 @@
 [
   {
-    "_id": "f231625b7a9ee176793a6b4e",
+    "_id": "6cebff3b7ad9ec9ed525c6d6",
     "sku": "SP-15PM-BLK",
     "name": "iPhone 15 Pro Max — 256GB Titanium",
     "category": "smartphones",
@@ -42,11 +42,11 @@
       "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80"
     ],
     "description": "The ultimate iPhone experience.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   },
   {
-    "_id": "bd5f4897a261796b3a63f3dd",
+    "_id": "2d4a7750a737850c5baea14c",
     "sku": "LP-MBP16-SLV",
     "name": "MacBook Pro 16\" — M3 Max / 36GB / 1TB",
     "category": "laptops",
@@ -88,11 +88,11 @@
       "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&q=80"
     ],
     "description": "The MacBook Pro blasts forward with M3 Max.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   },
   {
-    "_id": "d90ca839f7814aa24a2d306b",
+    "_id": "25ef39a3e9f9af35a55c5ddd",
     "sku": "AD-XM5-SNY",
     "name": "Sony WH-1000XM5 Wireless Headphones",
     "category": "audio",
@@ -134,11 +134,11 @@
       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&q=80"
     ],
     "description": "Industry-leading noise cancellation.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   },
   {
-    "_id": "78d68c577b4cbb667d591efc",
+    "_id": "45630b74865426f94d76a519",
     "sku": "SW-APW9-45",
     "name": "Apple Watch Series 9 GPS — 45mm Midnight",
     "category": "smartwatch",
@@ -179,11 +179,11 @@
       "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&q=80"
     ],
     "description": "Advanced health, safety, and activity features.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   },
   {
-    "_id": "a8b01359baab74b75798cb05",
+    "_id": "98adf9a1b780cb31dfc70943",
     "sku": "AC-GAN100-ANK",
     "name": "Anker Prime 100W GaN Wall Charger",
     "category": "accessories",
@@ -224,11 +224,11 @@
       "https://images.unsplash.com/photo-1622445262465-2481c4574875?w=600&q=80"
     ],
     "description": "Ultra-compact multi-port charger.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   },
   {
-    "_id": "5561273348c0440e996e274c",
+    "_id": "eac860cb07d03dee7c18d4b1",
     "sku": "SP-S24U-GRY",
     "name": "Samsung Galaxy S24 Ultra — 512GB Gray",
     "category": "smartphones",
@@ -269,7 +269,7 @@
       "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=600&q=80"
     ],
     "description": "Welcome to the era of mobile AI.",
-    "createdAt": "2026-07-08T19:04:42.099Z",
-    "updatedAt": "2026-07-08T19:04:42.099Z"
+    "createdAt": "2026-07-08T19:40:58.188Z",
+    "updatedAt": "2026-07-08T19:40:58.188Z"
   }
 ]
