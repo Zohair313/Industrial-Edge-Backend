@@ -6,6 +6,7 @@
     "role": "SUPER_ADMIN",
     "passwordHash": "$2b$12$PJH7ywBzwa2cyVCuJybBEOZwXmzViCe3GDm9gd9J4M.zqNUwKF8TO",
     "createdAt": "2026-07-08T17:11:19.370Z",
-    "updatedAt": "2026-07-08T17:11:19.370Z"
+    "updatedAt": "2026-07-08T17:29:02.992Z",
+    "lastLoginAt": "2026-07-08T17:29:02.992Z"
   }
 ]
